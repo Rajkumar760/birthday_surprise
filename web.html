@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Merlin Sofia 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#ff2d87; --violet:#a855f7; --cyan:#22d3ee;
+  --gold:#ffd166; --rose:#ff8dc4;
+  --bg:#05010c;
+  --border:rgba(255,255,255,.13);
+  --ease:cubic-bezier(.22,.9,.24,1);
+  --easeBack:cubic-bezier(.2,.9,.3,1.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden;height:100vh}
+img{display:block;max-width:100%}
+button{font-family:inherit}
+::selection{background:var(--pink);color:#fff}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:#0b0217}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--pink),var(--violet));border-radius:8px}
+
+/* ============================================================
+   BACKDROP
+   ============================================================ */
+#bg{position:fixed;inset:0;z-index:-3;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% -10%,#42106e 0%,transparent 55%),
+    radial-gradient(ellipse 70% 55% at 100% 100%,#5a0d4a 0%,transparent 55%),
+    radial-gradient(ellipse 60% 50% at 0% 90%,#0a3a56 0%,transparent 55%),
+    #05010c;}
+#aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.42;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(255,45,135,.4),transparent 42%),
+    radial-gradient(circle at 80% 60%,rgba(34,211,238,.3),transparent 42%),
+    radial-gradient(circle at 50% 90%,rgba(168,85,247,.34),transparent 46%);
+  filter:blur(46px);
+  animation:auroraShift 24s ease-in-out infinite alternate;
+  will-change:transform;}
+@keyframes auroraShift{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(-5%,3%,0) scale(1.12)}}
+#stars{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.7}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:9998}
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+#intro{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:24px;
+  background:radial-gradient(ellipse at center,#33094d 0%,#08010f 78%);
+  transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);}
+#intro.gone{opacity:0;transform:scale(1.2);filter:blur(20px);pointer-events:none}
+.intro-ring{position:absolute;width:520px;height:520px;border-radius:50%;
+  border:1px solid rgba(255,45,135,.35);
+  animation:ringPulse 3.5s ease-in-out infinite;pointer-events:none;}
+.intro-ring:nth-child(2){animation-delay:-1.2s;border-color:rgba(34,211,238,.3)}
+.intro-ring:nth-child(3){animation-delay:-2.4s;border-color:rgba(168,85,247,.35)}
+@keyframes ringPulse{0%,100%{transform:scale(.7);opacity:0}50%{transform:scale(1.3);opacity:1}}
+.intro-inner{position:relative;z-index:2;max-width:560px}
+.envelope{font-size:78px;display:inline-block;animation:giftBounce 1.7s ease-in-out infinite;
+  filter:drop-shadow(0 0 34px rgba(255,45,135,.9));}
+@keyframes giftBounce{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-20px) rotate(5deg)}}
+#intro h1{font-family:'Pacifico',cursive;font-size:clamp(26px,6.5vw,44px);margin:18px 0 12px;
+  background:linear-gradient(90deg,var(--pink),var(--gold),var(--cyan),var(--pink));
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 5s linear infinite;}
+@keyframes shine{to{background-position:300% 0}}
+#intro p{color:#c9b6e4;font-weight:300;font-size:15px;line-height:1.75}
+.hint{margin-top:16px;font-size:11.5px;opacity:.55;letter-spacing:1px}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn-glow{position:relative;margin-top:26px;padding:15px 40px;border:none;border-radius:60px;
+  font-size:15.5px;font-weight:600;color:#fff;cursor:pointer;
+  background:linear-gradient(135deg,var(--pink),var(--violet));
+  box-shadow:0 10px 34px rgba(255,45,135,.42);
+  transition:transform .3s var(--easeBack),box-shadow .3s ease;
+  -webkit-tap-highlight-color:transparent;overflow:hidden;}
+.btn-glow::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.4),transparent 70%);
+  transform:translateX(-100%);transition:transform .7s ease;}
+.btn-glow:hover::before{transform:translateX(100%)}
+.btn-glow:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 16px 50px rgba(255,45,135,.65)}
+.btn-glow:active{transform:scale(.96)}
+
+/* ============================================================
+   MUSIC
+   ============================================================ */
+#musicBtn{position:fixed;top:16px;right:16px;z-index:9000;width:50px;height:50px;border-radius:50%;
+  border:1px solid var(--border);background:rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  color:#fff;font-size:20px;cursor:pointer;display:grid;place-items:center;
+  transition:transform .3s var(--easeBack),background .3s ease;-webkit-tap-highlight-color:transparent;}
+#musicBtn:active{transform:scale(.88)}
+#musicBtn.spin{animation:spinDisc 3.4s linear infinite}
+@keyframes spinDisc{to{transform:rotate(360deg)}}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+main{position:relative;z-index:2}
+section{padding:90px 20px;max-width:1080px;margin:0 auto;position:relative}
+.section-head{text-align:center;margin-bottom:52px}
+.section-kicker{display:inline-block;font-size:11px;letter-spacing:3.5px;text-transform:uppercase;
+  color:#ffa9d0;font-weight:600;margin-bottom:14px;padding:7px 16px;border-radius:60px;
+  border:1px solid rgba(255,45,135,.35);background:rgba(255,45,135,.08);}
+.section-title{font-family:'Pacifico',cursive;font-size:clamp(26px,5.2vw,46px);line-height:1.15;
+  background:linear-gradient(90deg,var(--pink),var(--gold),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.section-sub{color:#b9a6d6;font-weight:300;font-size:14.5px;margin-top:12px;line-height:1.65}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding-top:80px;padding-bottom:60px;}
+.eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#ffa9d0;margin-bottom:22px;
+  font-weight:600;opacity:0;animation:fadeUp .9s .2s forwards;}
+.hero-title{font-size:clamp(34px,9.5vw,92px);font-weight:800;line-height:1.02;letter-spacing:-2px;
+  display:flex;flex-wrap:wrap;justify-content:center;}
+.hero-title span{display:inline-block;opacity:0;transform:translateY(60px) rotate(14deg) scale(.6);
+  background:linear-gradient(180deg,#fff 25%,#ffb3d9 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 24px rgba(255,45,135,.65));will-change:transform,opacity;}
+.hero-title span.go{animation:letterIn .85s var(--easeBack) forwards}
+@keyframes letterIn{to{opacity:1;transform:translateY(0) rotate(0) scale(1)}}
+.hero-name{font-family:'Pacifico',cursive;font-size:clamp(40px,10vw,88px);margin-top:2px;
+  background:linear-gradient(90deg,var(--pink),var(--gold),var(--cyan),var(--pink));
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 5s linear infinite,fadeUp 1s .9s both;
+  filter:drop-shadow(0 0 34px rgba(255,209,102,.45));}
+.hero-sub{max-width:620px;margin-top:26px;color:#c9b6e4;font-weight:300;font-size:15.5px;line-height:1.9;
+  animation:fadeUp 1s 1.15s both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.scroll-cue{margin-top:52px;font-size:11px;letter-spacing:2.8px;text-transform:uppercase;color:#8f7bb0;
+  animation:fadeUp 1s 1.5s both,bob 2.4s 2.5s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+.scroll-cue::after{content:'';display:block;width:1px;height:38px;margin:14px auto 0;
+  background:linear-gradient(180deg,#ff2d87,transparent);}
+.float-emoji{position:absolute;bottom:-100px;pointer-events:none;will-change:transform;
+  animation:rise linear infinite;}
+@keyframes rise{0%{transform:translate3d(0,0,0) rotate(-6deg);opacity:0}10%{opacity:.85}90%{opacity:.7}
+  100%{transform:translate3d(24px,-108vh,0) rotate(6deg);opacity:0}}
+
+/* ============================================================
+   HERO PORTRAIT — the centerpiece photo
+   ============================================================ */
+.portrait-stage{
+  position:relative;
+  width:min(340px,78vw);
+  aspect-ratio:3/4;
+  margin:44px auto 0;
+  animation:fadeUp 1.1s 1.35s both;
+}
+.portrait-frame{
+  position:absolute;inset:0;border-radius:26px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:
+    0 30px 80px rgba(255,45,135,.4),
+    0 0 0 8px rgba(255,255,255,.03),
+    inset 0 0 60px rgba(255,45,135,.15);
+  transform:rotate(-2.5deg);
+  transition:transform .8s var(--easeBack);
+  cursor:pointer;
+}
+.portrait-frame:hover{transform:rotate(0) scale(1.03)}
+.portrait-frame img{width:100%;height:100%;object-fit:cover}
+.portrait-frame::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(5,1,12,.65) 100%);
+  pointer-events:none;
+}
+.portrait-tag{
+  position:absolute;bottom:16px;left:16px;right:16px;z-index:3;
+  font-family:'Caveat',cursive;font-size:22px;color:#fff;
+  text-shadow:0 2px 12px rgba(0,0,0,.85);
+  text-align:center;transform:rotate(-1deg);
+}
+.portrait-badge{
+  position:absolute;top:-16px;right:-16px;z-index:4;
+  width:66px;height:66px;border-radius:50%;
+  display:grid;place-items:center;
+  font-family:'Pacifico',cursive;font-size:22px;color:#fff;
+  background:linear-gradient(135deg,var(--pink),var(--violet));
+  box-shadow:0 12px 30px rgba(255,45,135,.6);
+  border:3px solid #12071f;
+  animation:badgeSpin 12s linear infinite;
+}
+@keyframes badgeSpin{to{transform:rotate(360deg)}}
+.portrait-glow{
+  position:absolute;inset:-40px;z-index:-1;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,45,135,.35),transparent 65%);
+  filter:blur(30px);
+  animation:pulseGlow 4s ease-in-out infinite;
+}
+@keyframes pulseGlow{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+#lightbox{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  background:rgba(5,1,12,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  padding:24px;opacity:0;transition:opacity .4s var(--ease);}
+#lightbox.open{display:flex}
+#lightbox.show{opacity:1}
+#lbImg{max-width:min(92vw,960px);max-height:80vh;border-radius:22px;object-fit:contain;
+  box-shadow:0 30px 100px rgba(255,45,135,.5);animation:zoomIn .6s var(--easeBack);}
+@keyframes zoomIn{from{opacity:0;transform:scale(.82) rotate(-2deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+#lbClose{position:absolute;top:20px;right:20px;width:48px;height:48px;border-radius:50%;
+  border:1px solid var(--border);background:rgba(255,255,255,.1);color:#fff;font-size:22px;cursor:pointer;
+  display:grid;place-items:center;transition:transform .4s var(--easeBack),background .3s ease;
+  -webkit-tap-highlight-color:transparent;}
+#lbClose:hover{transform:rotate(90deg) scale(1.1);background:rgba(255,45,135,.5)}
+
+/* ============================================================
+   LETTER — the emotional core
+   ============================================================ */
+.letter-wrap{max-width:720px;margin:0 auto;padding:60px 44px 48px;
+  border-radius:28px;position:relative;
+  background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.03));
+  border:1px solid var(--border);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  box-shadow:0 30px 70px rgba(0,0,0,.4);}
+.letter-wrap::before{content:'';position:absolute;top:-1px;left:40px;right:40px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,45,135,.7),transparent);}
+.letter-mono{position:absolute;top:-30px;left:50%;transform:translateX(-50%);
+  width:60px;height:60px;border-radius:50%;display:grid;place-items:center;
+  font-family:'Pacifico',cursive;font-size:22px;color:#fff;
+  background:linear-gradient(135deg,var(--pink),var(--violet));
+  box-shadow:0 12px 30px rgba(255,45,135,.55);border:3px solid #12071f;}
+.letter-wrap p{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(15.5px,2.2vw,18px);
+  line-height:2;color:#efe6ff;
+  margin-bottom:22px;position:relative;z-index:1;
+}
+.letter-wrap p:last-of-type{margin-bottom:0}
+.letter-wrap .drop::first-letter{
+  font-size:3.4em;float:left;line-height:.82;padding:8px 14px 0 0;
+  background:linear-gradient(135deg,var(--pink),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;}
+.letter-sig{display:block;margin-top:30px;text-align:right;
+  font-family:'Pacifico',cursive;font-size:20px;
+  background:linear-gradient(90deg,var(--pink),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+@media(max-width:640px){.letter-wrap{padding:48px 24px 36px}}
+
+/* ============================================================
+   FLIP CARDS — fixed & upgraded
+   ============================================================ */
+.flip-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  perspective:1600px;
+}
+.flip{
+  position:relative;
+  height:270px;
+  cursor:pointer;
+  transform-style:preserve-3d;
+  transition:transform 1.1s cubic-bezier(.35,.15,.2,1);
+  will-change:transform;
+  -webkit-tap-highlight-color:transparent;
+}
+.flip.flipped{transform:rotateY(180deg)}
+.flip-face{
+  position:absolute;inset:0;border-radius:24px;overflow:hidden;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:30px 24px;
+  border:1px solid var(--border);
+}
+.flip-front{
+  background:linear-gradient(150deg,rgba(255,45,135,.16),rgba(168,85,247,.16));
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 20px 44px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.15);
+}
+.flip-front::before{
+  content:'';position:absolute;inset:-40%;
+  background:conic-gradient(from 0deg,transparent 0deg,rgba(255,45,135,.4) 90deg,transparent 180deg);
+  animation:rotateGlow 7s linear infinite;z-index:0;
+}
+.flip-front > *{position:relative;z-index:1}
+@keyframes rotateGlow{to{transform:rotate(360deg)}}
+.flip-emoji{font-size:52px;margin-bottom:16px;
+  filter:drop-shadow(0 0 22px rgba(255,209,102,.6));
+  transition:transform .5s var(--easeBack);}
+.flip:hover .flip-emoji{transform:scale(1.15) rotate(-8deg)}
+.flip-front h3{font-size:18px;font-weight:600;letter-spacing:.3px;
+  background:linear-gradient(90deg,#fff,#ffc7e0);
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.flip-front .tap{margin-top:16px;font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;
+  color:#ffa9d0;animation:blink 2.2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:.4}50%{opacity:1}}
+.flip-back{
+  transform:rotateY(180deg);
+  background:linear-gradient(150deg,rgba(34,211,238,.2),rgba(168,85,247,.25));
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 20px 44px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.15);
+}
+.flip-back p{font-size:14px;line-height:1.85;color:#f2e9ff;font-weight:300}
+
+/* ============================================================
+   MOMENTS — the second photo, cinematic
+   ============================================================ */
+.moment-scene{
+  position:relative;
+  max-width:820px;margin:0 auto;
+  border-radius:28px;overflow:hidden;
+  box-shadow:0 40px 100px rgba(0,0,0,.55);
+  border:1px solid var(--border);
+  aspect-ratio:16/10;
+}
+.moment-scene img{width:100%;height:100%;object-fit:cover;
+  transition:transform 2s var(--ease);will-change:transform;}
+.moment-scene:hover img{transform:scale(1.06)}
+.moment-scene::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(5,1,12,.05) 30%,rgba(5,1,12,.92) 100%);
+  pointer-events:none;
+}
+.moment-text{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:34px 32px 30px;
+  text-align:left;
+}
+.moment-text .k{font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:#ffa9d0;font-weight:600}
+.moment-text h3{font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(20px,3.5vw,30px);margin-top:10px;line-height:1.35;
+  background:linear-gradient(90deg,#fff,#ffc7e0);
+  -webkit-background-clip:text;background-clip:text;color:transparent;font-weight:500;}
+@media(max-width:640px){.moment-scene{aspect-ratio:4/5}.moment-text{padding:24px 20px 22px}}
+
+/* ============================================================
+   LOVE NOTES — the secret messages
+   ============================================================ */
+.love-notes{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;margin-top:8px;
+}
+.note{
+  position:relative;
+  padding:30px 24px 26px;
+  border-radius:20px;
+  background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  border:1px solid var(--border);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  cursor:pointer;
+  transition:transform .5s var(--ease),box-shadow .5s ease,border-color .4s ease;
+  overflow:hidden;
+  -webkit-tap-highlight-color:transparent;
+}
+.note:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(255,45,135,.3);border-color:rgba(255,45,135,.5)}
+.note-emoji{font-size:32px;display:block;margin-bottom:14px;
+  transition:transform .5s var(--easeBack);}
+.note:hover .note-emoji{transform:scale(1.2) rotate(-10deg)}
+.note-title{font-family:'Caveat',cursive;font-size:26px;color:#ffd166;margin-bottom:10px;line-height:1.15}
+.note-body{
+  font-size:14.5px;line-height:1.75;color:#e6d9f7;font-weight:300;
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .7s var(--ease),opacity .5s ease,margin-top .5s ease;
+}
+.note.open .note-body{max-height:340px;opacity:1;margin-top:8px}
+.note-hint{
+  margin-top:14px;font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;
+  color:#ffa9d0;opacity:.85;transition:opacity .3s ease;
+}
+.note.open .note-hint{opacity:0;height:0;margin:0}
+
+/* ============================================================
+   REASONS — a scroll-driven list
+   ============================================================ */
+.reasons-list{
+  max-width:720px;margin:0 auto;
+  display:flex;flex-direction:column;gap:2px;
+}
+.reason{
+  display:flex;align-items:flex-start;gap:22px;
+  padding:26px 4px;
+  border-bottom:1px dashed rgba(255,255,255,.09);
+  opacity:0;transform:translateX(-24px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease);
+}
+.reason.in{opacity:1;transform:translateX(0)}
+.reason:last-child{border-bottom:none}
+.reason-num{
+  flex:0 0 auto;
+  font-family:'Pacifico',cursive;font-size:28px;
+  background:linear-gradient(135deg,var(--pink),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  line-height:1;padding-top:2px;min-width:46px;
+}
+.reason-text{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(15px,2.1vw,18.5px);line-height:1.75;color:#efe6ff;
+}
+.reason-text strong{font-style:normal;font-weight:600;
+  background:linear-gradient(90deg,var(--pink),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+
+/* ============================================================
+   SCRATCH FINALE
+   ============================================================ */
+.finale{
+  max-width:760px;margin:0 auto;
+  padding:60px 34px 54px;text-align:center;
+  border-radius:28px;position:relative;
+  background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
+  border:1px solid var(--border);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  box-shadow:0 30px 70px rgba(0,0,0,.4);
+}
+.cake{font-size:70px;display:inline-block;animation:giftBounce 2.2s ease-in-out infinite;
+  filter:drop-shadow(0 0 30px rgba(255,209,102,.75));}
+.finale h2{font-family:'Pacifico',cursive;font-size:clamp(24px,4.6vw,40px);margin:20px 0 14px;
+  background:linear-gradient(90deg,var(--pink),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.finale > p{color:#d7c8ee;font-weight:300;line-height:1.9;font-size:15px}
+.scratch-wrap{position:relative;width:100%;max-width:480px;height:190px;
+  margin:32px auto 0;border-radius:22px;overflow:hidden;
+  background:linear-gradient(135deg,var(--pink),var(--violet),var(--cyan));
+  box-shadow:0 20px 54px rgba(255,45,135,.45);cursor:crosshair;
+  -webkit-tap-highlight-color:transparent;}
+.scratch-hidden{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:26px;text-align:center;
+  background:rgba(5,1,12,.55);}
+.scratch-hidden .small{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
+  color:#ffa9d0;margin-bottom:12px;}
+.scratch-hidden .big{font-family:'Pacifico',cursive;font-size:clamp(18px,3.4vw,26px);
+  color:#fff;line-height:1.45;}
+#scratchCanvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.scratch-hint{margin-top:16px;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;
+  color:#a58cc4;animation:blink 2.2s ease-in-out infinite;}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(42px);
+  transition:opacity .9s var(--ease),transform .9s var(--ease);will-change:opacity,transform}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+@media(max-width:640px){
+  section{padding:64px 16px}
+  .section-head{margin-bottom:40px}
+  .finale{padding:46px 20px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;
+    transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body class="locked">
+
+<div id="bg"></div>
+<div id="aurora"></div>
+<canvas id="stars"></canvas>
+<canvas id="fx"></canvas>
+
+<div id="intro">
+  <div class="intro-ring"></div>
+  <div class="intro-ring"></div>
+  <div class="intro-ring"></div>
+  <div class="intro-inner">
+    <div class="envelope">💌</div>
+    <h1>A Letter Arrived For…</h1>
+    <p><strong style="color:#fff;font-weight:600">Merlin Sofia</strong><br>
+    Someone made you something. It's waiting inside.</p>
+    <button id="openBtn" class="btn-glow">Open It ✨</button>
+    <p class="hint">🔊 Best with sound on</p>
+  </div>
+</div>
+
+<button id="musicBtn" title="Toggle music">🔊</button>
+
+<main>
+
+  <!-- ============ HERO + PORTRAIT ============ -->
+  <section class="hero">
+    <div id="floaters"></div>
+    <p class="eyebrow">🎉 For the one and only 🎉</p>
+    <h1 class="hero-title" id="heroTitle">Happy Birthday</h1>
+    <h2 class="hero-name">Merlin Sofia</h2>
+
+    <!-- HERO PORTRAIT -->
+    <div class="portrait-stage">
+      <div class="portrait-glow"></div>
+      <div class="portrait-badge">M</div>
+      <div class="portrait-frame" id="heroPortrait">
+        <!-- ⬇️ REPLACE THIS SRC WITH YOUR BEST PHOTO OF HER ⬇️ -->
+        <img src="PASTE_YOUR_HERO_PHOTO_HERE.jpg" alt="Merlin Sofia" />
+        <div class="portrait-tag">the reason this page exists ✨</div>
+      </div>
+    </div>
+
+    <p class="hero-sub">
+      Some people just make life softer, warmer, funnier.<br>
+      You're one of them. And I built this whole universe to say it.
+    </p>
+    <div class="scroll-cue">Scroll for your letter</div>
+  </section>
+
+  <!-- ============ LETTER ============ -->
+  <section>
+    <div class="section-head reveal">
+      <span class="section-kicker">A Letter</span>
+      <h2 class="section-title">For You, Merlin</h2>
+      <p class="section-sub">Read it slowly. Every word was chosen.</p>
+    </div>
+    <div class="letter-wrap reveal">
+      <div class="letter-mono">M</div>
+      <p class="drop">
+        Merlin, I need you to know something. Not in a passing way — in a stop-what-you're-doing
+        and actually listen way. You matter. Not because of what you do for people, but because
+        of who you are when no one's watching. The quiet kind of kind. The loyal kind of loyal.
+      </p>
+      <p>
+        I've watched you give pieces of yourself to people who didn't always deserve it. I've
+        watched you smile through things that would've broken most. And I've watched you stay
+        soft in a world that keeps trying to make people hard. That takes a strength most people
+        don't have a name for.
+      </p>
+      <p>
+        You have this thing where you make people feel seen. Like, actually seen. Not just heard.
+        And I don't think you realize how rare that is, or how much it's changed me. The bad days
+        got easier because you existed on them. The good days got better because you were there
+        to laugh through them.
+      </p>
+      <p>
+        I'm not good at saying this out loud — so I'm saying it here instead, in a place you'll
+        find when you least expect it. You are one of the best things that has ever happened to me.
+        Not "a friend." <em>One of the best things.</em> Full stop.
+      </p>
+      <p>
+        Happy birthday, Merlin Sofia. I hope this year gives you back every bit of love you've
+        poured into the world — ten times over. And I hope you know, on the days you forget,
+        there's someone out here who is endlessly, quietly, permanently grateful that you exist.
+      </p>
+      <span class="letter-sig">— always yours</span>
+    </div>
+  </section>
+
+  <!-- ============ MOMENTS PHOTO ============ -->
+  <section>
+    <div class="section-head reveal">
+      <span class="section-kicker">A Moment</span>
+      <h2 class="section-title">If I Could Freeze One Frame</h2>
+      <p class="section-sub">It would probably be this one.</p>
+    </div>
+    <div class="moment-scene reveal" id="momentScene">
+      <!-- ⬇️ REPLACE WITH A PHOTO OF YOU TWO OR A MEMORY PHOTO ⬇️ -->
+      <img src="PASTE_YOUR_MOMENT_PHOTO_HERE.jpg" alt="A moment worth keeping" />
+      <div class="moment-text">
+        <span class="k">the best kind of ordinary</span>
+        <h3>You, laughing at something only we'd find funny.</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOVE NOTES ============ -->
+  <section>
+    <div class="section-head reveal">
+      <span class="section-kicker">Things Left Unsaid</span>
+      <h2 class="section-title">Little Truths</h2>
+      <p class="section-sub">Tap each one — they open differently 💫</p>
+    </div>
+    <div class="love-notes" id="loveNotes"></div>
+  </section>
+
+  <!-- ============ REASONS ============ -->
+  <section>
+    <div class="section-head reveal">
+      <span class="section-kicker">The Real List</span>
+      <h2 class="section-title">Reasons You're Unreplaceable</h2>
+      <p class="section-sub">Not the polite kind. The honest kind.</p>
+    </div>
+    <div class="reasons-list" id="reasonsList"></div>
+  </section>
+
+  <!-- ============ SCRATCH FINALE ============ -->
+  <section style="padding-bottom:120px">
+    <div class="finale reveal">
+      <div class="cake">🎂</div>
+      <h2>One last thing, Merlin…</h2>
+      <p>Scratch below. There's something I couldn't say out loud. 👇</p>
+
+      <div class="scratch-wrap" id="scratchWrap">
+        <div class="scratch-hidden">
+          <span class="small">a secret, just for you</span>
+          <span class="big" id="secretText">You are so, so loved.</span>
+        </div>
+        <canvas id="scratchCanvas"></canvas>
+      </div>
+      <p class="scratch-hint" id="scratchHint">scratch with your finger / mouse</p>
+
+      <p style="margin-top:36px;font-size:15.5px;line-height:2;color:#f0e6ff">
+        Happy Birthday, Merlin Sofia. 🎉<br>
+        Thank you for being the person you are.
+      </p>
+      <button id="wishBtn" class="btn-glow">🎆 Send Fireworks</button>
+    </div>
+  </section>
+
+</main>
+
+<div id="lightbox">
+  <button id="lbClose">✕</button>
+  <img id="lbImg" src="" alt="" />
+</div>
+
+<script>
+/* ================================================================
+   ⚙️ CONFIG — paste your photo URLs here
+   ================================================================
+   Upload photos to imgur.com and grab the "direct link" (ends in .jpg / .png).
+   Replace the 3 placeholders below.
+   ================================================================ */
+const CONFIG = {
+
+  /* 1. Hero portrait — one great photo of Merlin */
+  heroPhoto: "photo2.jpeg",
+
+  /* 2. A moment photo — you two, or a memory */
+  momentPhoto: "photo3.jpeg",
+
+  /* 3. Little truths — tap to reveal */
+  truths: [
+    {
+      emoji: "🌙",
+      title: "The 2 AM thing",
+      body: "When the world is asleep and we're just talking about nothing and everything — those are the nights I keep. Not the big ones. The quiet ones."
+    },
+    {
+      emoji: "🫂",
+      title: "You never made me explain",
+      body: "On the hard days, you just showed up. No questions, no fixing, no advice I didn't ask for. Just… there. I've never told you how much that meant."
+    },
+    {
+      emoji: "😂",
+      title: "That laugh",
+      body: "The snort mid-laugh one. The one where you can't breathe and I can't either and neither of us remembers what started it. My favourite sound. Genuinely."
+    },
+    {
+  emoji: "💌",
+  title: "Something rarely said",
+  body: "You have a beauty that isn't just seen — it's felt. It lives in your smile, your laugh, the way your eyes light up when you love something. It's quiet, effortless, unforgettable. And it's the kind that stays with people long after you've left the room."
+},
+    {
+      emoji: "✨",
+      title: "Who you are",
+      body: "You stayed soft in a world that keeps trying to make people hard. That's not weakness. That's the rarest kind of strength, and I see it every single day."
+    },
+    {
+      emoji: "♾️",
+      title: "The promise",
+      body: "Distance, time, busy seasons, life chaos — none of it touches this. You're not just my best friend. You're a permanent part of my story."
+    }
+  ],
+
+  /* 4. Reasons — the scroll-driven list */
+  reasons: [
+    "You listen like it actually matters. <strong>Because with you, it does.</strong>",
+    "You remember the small things nobody else bothers to. <strong>Every single time.</strong>",
+    "You make ordinary days feel like something worth looking forward to. <strong>Effortlessly.</strong>",
+    "You've seen me at my worst and stayed anyway. <strong>And never once made me feel small for it.</strong>",
+    "You laugh with your whole body. <strong>It's my favourite thing.</strong>",
+    "You give people space to be exactly who they are. <strong>That's a superpower.</strong>",
+    "You carry your own weight quietly and still show up for everyone else. <strong>I see it. I always see it.</strong>",
+    "You inspire people just by being yourself. <strong>That's a rare kind of magic.</strong>"
+  ],
+
+  /* 5. Secret under the scratch */
+  secret: "I'm so glad the universe made you, Merlin. 💖"
+};
+
+/* ================================================================
+   HELPERS
+   ================================================================ */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const rand = (a, b) => Math.random() * (b - a) + a;
+const PALETTE = ["#ff2d87", "#ffd166", "#22d3ee", "#a855f7", "#ffffff", "#ff8dc4"];
+
+/* apply photo URLs */
+$("#heroPortrait img").src = CONFIG.heroPhoto;
+$("#momentScene img").src = CONFIG.momentPhoto;
+
+/* ================================================================
+   HERO LETTERS
+   ================================================================ */
+(function heroTitle(){
+  const el = $("#heroTitle");
+  const text = el.textContent.trim();
+  el.textContent = "";
+  [...text].forEach((ch, i) => {
+    const s = document.createElement("span");
+    s.textContent = ch === " " ? "\u00A0" : ch;
+    s.style.animationDelay = (0.05 * i + 0.4) + "s";
+    s.classList.add("go");
+    el.appendChild(s);
+  });
+})();
+
+/* ================================================================
+   FLOATERS
+   ================================================================ */
+(function floaters(){
+  const wrap = $("#floaters");
+  const set = ["🎈","💖","✨","🎉","🌟","🎀"];
+  for (let i = 0; i < 8; i++){
+    const b = document.createElement("div");
+    b.className = "float-emoji";
+    b.textContent = set[i % set.length];
+    b.style.left = rand(4, 92) + "%";
+    b.style.fontSize = rand(22, 38) + "px";
+    b.style.animationDuration = rand(16, 28) + "s";
+    b.style.animationDelay = (-rand(0, 24)) + "s";
+    wrap.appendChild(b);
+  }
+})();
+
+/* ================================================================
+   STARS
+   ================================================================ */
+(function stars(){
+  const c = $("#stars"), x = c.getContext("2d");
+  let dpr = 1, stars = [], running = true;
+
+  function resize(){
+    dpr = Math.min(devicePixelRatio || 1, 1.5);
+    c.width = innerWidth * dpr; c.height = innerHeight * dpr;
+    c.style.width = innerWidth + "px"; c.style.height = innerHeight + "px";
+    x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = innerWidth < 640 ? 55 : 100;
+    stars = Array.from({ length: count }, () => ({
+      x: Math.random() * innerWidth, y: Math.random() * innerHeight,
+      r: Math.random() * 1.3 + 0.3, a: Math.random() * Math.PI * 2,
+      s: Math.random() * 0.018 + 0.004
+    }));
+  }
+  let last = 0;
+  function loop(t){
+    requestAnimationFrame(loop);
+    if (!running) return;
+    if (t - last < 33) return;
+    last = t;
+    x.clearRect(0, 0, innerWidth, innerHeight);
+    for (const st of stars){
+      st.a += st.s;
+      const alpha = 0.25 + Math.abs(Math.sin(st.a)) * 0.7;
+      x.beginPath(); x.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+      x.fillStyle = "rgba(255,255,255," + alpha + ")"; x.fill();
+    }
+  }
+  resize(); addEventListener("resize", resize);
+  requestAnimationFrame(loop);
+  document.addEventListener("visibilitychange", () => { running = !document.hidden; });
+})();
+
+/* ================================================================
+   PARTICLES
+   ================================================================ */
+const fx = $("#fx"), fxc = fx.getContext("2d");
+let fxDpr = 1, particles = [];
+const MAX_P = 300;
+
+function fxResize(){
+  fxDpr = Math.min(devicePixelRatio || 1, 1.5);
+  fx.width = innerWidth * fxDpr; fx.height = innerHeight * fxDpr;
+  fx.style.width = innerWidth + "px"; fx.style.height = innerHeight + "px";
+  fxc.setTransform(fxDpr, 0, 0, fxDpr, 0, 0);
+}
+fxResize(); addEventListener("resize", fxResize);
+
+function burst(x, y, count = 50, opts = {}){
+  const speed = opts.speed ?? 10;
+  const gravity = opts.gravity ?? 0.16;
+  const emojiSet = opts.emoji ?? null;
+  if (particles.length + count > MAX_P) count = Math.max(0, MAX_P - particles.length);
+  for (let i = 0; i < count; i++){
+    const a = rand(0, Math.PI * 2);
+    const sp = rand(speed * 0.35, speed);
+    const isEmoji = emojiSet && Math.random() < 0.2;
+    particles.push({
+      x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - rand(1, 4),
+      g: gravity, drag: 0.985, life: 1, decay: rand(0.008, 0.018),
+      size: rand(5, 11), rot: rand(0, Math.PI * 2), vr: rand(-0.25, 0.25),
+      color: PALETTE[(Math.random() * PALETTE.length) | 0],
+      shape: Math.random() < 0.35 ? "circle" : "rect",
+      emoji: isEmoji ? emojiSet[(Math.random() * emojiSet.length) | 0] : null
+    });
+  }
+}
+function firework(x, y){
+  const color = PALETTE[(Math.random() * PALETTE.length) | 0];
+  const n = 46;
+  if (particles.length + n > MAX_P) particles.splice(0, particles.length + n - MAX_P);
+  for (let i = 0; i < n; i++){
+    const a = (Math.PI * 2 * i) / n;
+    const sp = rand(3.2, 8);
+    particles.push({
+      x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp,
+      g: 0.055, drag: 0.965, life: 1, decay: rand(0.012, 0.022),
+      size: rand(2, 4), rot: 0, vr: 0,
+      color: Math.random() < 0.7 ? color : "#fff",
+      shape: "circle", glow: true, emoji: null
+    });
+  }
+}
+let lastFx = 0;
+function fxLoop(t){
+  requestAnimationFrame(fxLoop);
+  if (!particles.length){ fxc.clearRect(0, 0, innerWidth, innerHeight); return; }
+  if (t - lastFx < 22) return;
+  lastFx = t;
+  fxc.clearRect(0, 0, innerWidth, innerHeight);
+  for (let i = particles.length - 1; i >= 0; i--){
+    const p = particles[i];
+    p.vx *= p.drag; p.vy = p.vy * p.drag + p.g;
+    p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.life -= p.decay;
+    if (p.life <= 0 || p.y > innerHeight + 80){ particles.splice(i, 1); continue; }
+    fxc.globalAlpha = p.life;
+    fxc.save(); fxc.translate(p.x, p.y); fxc.rotate(p.rot);
+    if (p.glow){ fxc.shadowBlur = 12; fxc.shadowColor = p.color; }
+    if (p.emoji){
+      fxc.font = (p.size * 2.2) + "px serif";
+      fxc.textAlign = "center"; fxc.textBaseline = "middle";
+      fxc.fillText(p.emoji, 0, 0);
+    } else {
+      fxc.fillStyle = p.color;
+      if (p.shape === "circle"){ fxc.beginPath(); fxc.arc(0, 0, p.size/2, 0, Math.PI*2); fxc.fill(); }
+      else { fxc.fillRect(-p.size/2, -p.size/4, p.size, p.size/2); }
+    }
+    fxc.restore();
+  }
+  fxc.globalAlpha = 1;
+}
+requestAnimationFrame(fxLoop);
+
+/* ================================================================
+   MUSIC — Happy Birthday
+   ================================================================ */
+let actx = null, master = null, musicOn = false, musicTimer = null;
+const MELODY = [
+  [392.00,.75],[392.00,.25],[440.00,1],[392.00,1],[523.25,1],[493.88,2],
+  [392.00,.75],[392.00,.25],[440.00,1],[392.00,1],[587.33,1],[523.25,2],
+  [392.00,.75],[392.00,.25],[783.99,1],[659.25,1],[523.25,1],[493.88,1],[440.00,2],
+  [698.46,.75],[698.46,.25],[659.25,1],[523.25,1],[587.33,1],[523.25,2.5]
+];
+function initAudio(){
+  if (actx) return;
+  actx = new (window.AudioContext || window.webkitAudioContext)();
+  master = actx.createGain(); master.gain.value = 0; master.connect(actx.destination);
+}
+function scheduleNote(freq, time, dur){
+  const o1 = actx.createOscillator(), g1 = actx.createGain();
+  const o2 = actx.createOscillator(), g2 = actx.createGain();
+  o1.type = "triangle"; o1.frequency.value = freq;
+  o2.type = "sine";     o2.frequency.value = freq * 2;
+  g1.gain.setValueAtTime(0, time);
+  g1.gain.linearRampToValueAtTime(0.18, time + 0.025);
+  g1.gain.exponentialRampToValueAtTime(0.0008, time + dur * 0.95);
+  g2.gain.setValueAtTime(0, time);
+  g2.gain.linearRampToValueAtTime(0.04, time + 0.02);
+  g2.gain.exponentialRampToValueAtTime(0.0005, time + dur * 0.6);
+  o1.connect(g1).connect(master); o2.connect(g2).connect(master);
+  o1.start(time); o1.stop(time + dur); o2.start(time); o2.stop(time + dur);
+}
+function playMelody(){
+  if (!musicOn) return;
+  const beat = 0.44;
+  let t = actx.currentTime + 0.15;
+  MELODY.forEach(([f, b]) => { const dur = b * beat; scheduleNote(f, t, dur); t += dur; });
+  musicTimer = setTimeout(playMelody, (t - actx.currentTime) * 1000 + 2800);
+}
+function startMusic(){
+  initAudio();
+  if (actx.state === "suspended") actx.resume();
+  musicOn = true;
+  master.gain.cancelScheduledValues(actx.currentTime);
+  master.gain.linearRampToValueAtTime(0.5, actx.currentTime + 1.2);
+  clearTimeout(musicTimer); playMelody();
+  $("#musicBtn").textContent = "🔊"; $("#musicBtn").classList.add("spin");
+}
+function stopMusic(){
+  musicOn = false; clearTimeout(musicTimer);
+  if (master) master.gain.linearRampToValueAtTime(0, actx.currentTime + 0.4);
+  $("#musicBtn").textContent = "🔇"; $("#musicBtn").classList.remove("spin");
+}
+$("#musicBtn").addEventListener("click", () => musicOn ? stopMusic() : startMusic());
+
+/* ================================================================
+   INTRO OPEN
+   ================================================================ */
+$("#openBtn").addEventListener("click", () => {
+  const intro = $("#intro");
+  intro.classList.add("gone");
+  document.body.classList.remove("locked");
+  setTimeout(() => { intro.style.display = "none"; }, 1000);
+  startMusic();
+  const cx = innerWidth / 2, cy = innerHeight / 2;
+  burst(cx, cy, 110, { speed: 14, emoji: ["💖","✨","🎉","🎊","⭐"] });
+  setTimeout(() => burst(innerWidth * 0.2, innerHeight * 0.42, 55, { speed: 12 }), 300);
+  setTimeout(() => burst(innerWidth * 0.8, innerHeight * 0.38, 55, { speed: 12 }), 600);
+  setTimeout(() => burst(cx, innerHeight * 0.72, 75, { speed: 14 }), 900);
+});
+
+/* ================================================================
+   LIGHTBOX (hero portrait + moment scene)
+   ================================================================ */
+(function lightbox(){
+  const lb = $("#lightbox"), lbImg = $("#lbImg");
+  const openers = ["#heroPortrait", "#momentScene"];
+  openers.forEach(sel => {
+    const el = $(sel);
+    if (!el) return;
+    el.addEventListener("click", () => {
+      const img = el.querySelector("img");
+      if (!img || !img.src) return;
+      lbImg.src = img.src;
+      lb.classList.add("open");
+      requestAnimationFrame(() => lb.classList.add("show"));
+      const r = el.getBoundingClientRect();
+      burst(r.left + r.width / 2, r.top + r.height / 2, 24, {
+        speed: 7, gravity: 0.1, decay: 0.025, emoji: ["✨","💖","⭐"]
+      });
+    });
+  });
+  function closeLb(){
+    lb.classList.remove("show");
+    setTimeout(() => { lb.classList.remove("open"); lbImg.src = ""; }, 350);
+  }
+  $("#lbClose").addEventListener("click", closeLb);
+  lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
+  addEventListener("keydown", (e) => { if (e.key === "Escape") closeLb(); });
+})();
+
+/* ================================================================
+   LOVE NOTES (tap to reveal)
+   ================================================================ */
+(function loveNotes(){
+  const grid = $("#loveNotes");
+  grid.innerHTML = CONFIG.truths.map((t, i) => (
+    '<div class="note reveal" data-i="' + i + '" style="transition-delay:' + (i * 60) + 'ms">' +
+      '<span class="note-emoji">' + t.emoji + '</span>' +
+      '<h3 class="note-title">' + t.title + '</h3>' +
+      '<div class="note-body">' + t.body + '</div>' +
+      '<div class="note-hint">tap to open</div>' +
+    '</div>'
+  )).join("");
+
+  $$(".note").forEach(note => {
+    note.addEventListener("click", () => {
+      note.classList.toggle("open");
+      if (note.classList.contains("open")){
+        const r = note.getBoundingClientRect();
+        burst(r.left + r.width / 2, r.top + 30, 14, {
+          speed: 5, gravity: 0.1, decay: 0.026, emoji: ["💖","✨"]
+        });
+      }
+    });
+  });
+})();
+
+/* ================================================================
+   REASONS — scroll-driven
+   ================================================================ */
+(function reasons(){
+  const wrap = $("#reasonsList");
+  wrap.innerHTML = CONFIG.reasons.map((r, i) => (
+    '<div class="reason" style="transition-delay:' + (i * 40) + 'ms">' +
+      '<span class="reason-num">' + String(i + 1).padStart(2, "0") + '</span>' +
+      '<p class="reason-text">' + r + '</p>' +
+    '</div>'
+  )).join("");
+
+  if (!("IntersectionObserver" in window)){
+    $$(".reason").forEach(el => el.classList.add("in"));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting){
+        en.target.classList.add("in");
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  $$(".reason").forEach(el => io.observe(el));
+})();
+
+/* ================================================================
+   SCRATCH CARD
+   ================================================================ */
+(function scratch(){
+  const wrap = $("#scratchWrap");
+  const canvas = $("#scratchCanvas");
+  const hint = $("#scratchHint");
+  const ctx = canvas.getContext("2d");
+  let drawing = false, revealed = false, lastX = 0, lastY = 0;
+
+  $("#secretText").textContent = CONFIG.secret;
+
+  function setup(){
+    const r = wrap.getBoundingClientRect();
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = r.width * dpr; canvas.height = r.height * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const grad = ctx.createLinearGradient(0, 0, r.width, r.height);
+    grad.addColorStop(0, "#3a0d52");
+    grad.addColorStop(0.5, "#5a1570");
+    grad.addColorStop(1, "#2a0b4d");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, r.width, r.height);
+    ctx.font = "20px serif";
+    for (let i = 0; i < 26; i++){
+      ctx.globalAlpha = rand(0.15, 0.5);
+      ctx.fillText("✨", rand(0, r.width), rand(20, r.height));
+    }
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = "rgba(255,255,255,.9)";
+    ctx.font = "600 14px Poppins, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("SCRATCH HERE", r.width / 2, r.height / 2 - 6);
+    ctx.font = "300 11.5px Poppins, sans-serif";
+    ctx.fillStyle = "rgba(255,255,255,.55)";
+    ctx.fillText("something is waiting", r.width / 2, r.height / 2 + 16);
+    ctx.globalCompositeOperation = "destination-out";
+  }
+  setup();
+  let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { if (!revealed) setup(); }, 250); });
+
+  function pos(e){
+    const r = canvas.getBoundingClientRect();
+    const p = e.touches ? e.touches[0] : e;
+    return { x: p.clientX - r.left, y: p.clientY - r.top };
+  }
+  function scratchAt(x, y){ ctx.beginPath(); ctx.arc(x, y, 34, 0, Math.PI * 2); ctx.fill(); }
+  function down(e){ if (revealed) return; drawing = true; const p = pos(e); lastX = p.x; lastY = p.y; scratchAt(p.x, p.y); e.preventDefault(); }
+  function move(e){
+    if (!drawing || revealed) return;
+    const p = pos(e);
+    const dist = Math.hypot(p.x - lastX, p.y - lastY);
+    const steps = Math.ceil(dist / 12);
+    for (let i = 1; i <= steps; i++){
+      scratchAt(lastX + (p.x - lastX) * (i / steps), lastY + (p.y - lastY) * (i / steps));
+    }
+    lastX = p.x; lastY = p.y;
+    checkReveal();
+    e.preventDefault();
+  }
+  function up(){ drawing = false; }
+  function checkReveal(){
+    const r = wrap.getBoundingClientRect();
+    const w = Math.floor(r.width), h = Math.floor(r.height);
+    if (w < 4 || h < 4) return;
+    const data = ctx.getImageData(0, 0, w, h).data;
+    let clear = 0, total = 0;
+    for (let i = 3; i < data.length; i += 40){ total++; if (data[i] < 40) clear++; }
+    if (total && clear / total > 0.45 && !revealed){
+      revealed = true;
+      hint.textContent = "you found it 💖";
+      const rect = wrap.getBoundingClientRect();
+      burst(rect.left + rect.width / 2, rect.top + rect.height / 2, 80, {
+        speed: 13, emoji: ["💖","✨","🎉","⭐","💫"]
+      });
+    }
+  }
+  canvas.addEventListener("mousedown", down);
+  canvas.addEventListener("mousemove", move);
+  addEventListener("mouseup", up);
+  canvas.addEventListener("touchstart", down, { passive: false });
+  canvas.addEventListener("touchmove", move, { passive: false });
+  addEventListener("touchend", up);
+})();
+
+/* ================================================================
+   WISH BUTTON
+   ================================================================ */
+$("#wishBtn").addEventListener("click", (e) => {
+  const r = e.currentTarget.getBoundingClientRect();
+  burst(r.left + r.width / 2, r.top, 70, { speed: 12, emoji: ["🎆","✨","💫","🎇"] });
+  for (let i = 0; i < 6; i++){
+    setTimeout(() => firework(rand(innerWidth * 0.15, innerWidth * 0.85), rand(innerHeight * 0.12, innerHeight * 0.5)), i * 320);
+  }
+  setTimeout(() => burst(innerWidth / 2, innerHeight * 0.35, 90, {
+    speed: 14, emoji: ["🎂","💖","🎉","⭐","✨","🥳"]
+  }), 500);
+  const btn = e.currentTarget;
+  const orig = btn.textContent;
+  btn.textContent = "🎉 Wish Sent!";
+  setTimeout(() => { btn.textContent = orig; }, 3000);
+});
+
+/* ================================================================
+   TAP SPARKLES
+   ================================================================ */
+let lastSpark = 0;
+addEventListener("pointerdown", (e) => {
+  const now = Date.now();
+  if (now - lastSpark < 140) return;
+  lastSpark = now;
+  if (e.target.closest("button, .note, #scratchCanvas, .portrait-frame, .moment-scene")) return;
+  burst(e.clientX, e.clientY, 7, { speed: 5, gravity: 0.08, decay: 0.03, emoji: ["✨","💖"] });
+});
+
+/* ================================================================
+   SCROLL REVEAL
+   ================================================================ */
+(function reveal(){
+  if (!("IntersectionObserver" in window)){
+    $$(".reveal").forEach(el => el.classList.add("in"));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+  $$(".reveal").forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
